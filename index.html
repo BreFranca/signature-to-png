@@ -3,8 +3,54 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Signature to PNG</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="main.css">
 </head>
 <body>
-	
+	<div class="container" id="signature-export">
+		<div id="form-data">
+			<h1>Assinatura de Email Personalizada</h1>
+			<br>
+			<input type="text" name="name" id="input-name" placeholder="Nome Completo">
+			<input type="text" name="phone1" id="input-phone1" placeholder="Telefone 1" class="phone">
+			<input type="text" name="phone2" id="input-phone2" placeholder="Telefone 2" class="phone">
+			<input type="mail" name="email" id="input-email" placeholder="Email" required="required">
+			<!-- <textarea name="adress" id="input-address" placeholder="Endereço"></textarea>
+			<input type="text" name="site" id="input-site" placeholder="Site"> -->
+		</div>
+		<div class="container-signature">
+			<div id="signature">
+				<div class="logo"></div>
+				<div class="line-vertical"></div>
+				<div class="contacts">
+					<h2 id="name"></h2>
+					<div class="phones">
+						<i class="icon icon-phone"></i>
+						<span id="phone1"></span>
+						<div id="phone2-container">
+							<span>/</span>
+							<span id="phone2"></span>
+						</div>
+					</div>
+					<div class="email">
+						<i class="icon icon-email"></i>
+						<span id="email"></span>
+					</div>
+					<div class="address">
+						<p><span id="address">Rua Wisard, 273, Loft 6, Vila Madalena - 05435-080
+							<br>São Paulo - SP</span> - <strong id="site">www.jota3w.com.br</strong></p>
+					</div>
+					<div class="logo-jota"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<button>Export</button>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="libs/jquery.mask.min.js"></script>
+	<script src="libs/html2canvas.min.js"></script>
+	<script src="main.js"></script>
 </body>
 </html>
