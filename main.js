@@ -76,7 +76,7 @@ $('button').click(function(e){
 		// site = $('#site').html(),
 
 		nameArchive = name.replace(/ /g, '-');
-		nameArchive = name.toLowerCase();
+		nameArchive = nameArchive.toLowerCase();
 
 	if($.isNumeric(name)) {
 		alert('Nome pode conter somente letras');
