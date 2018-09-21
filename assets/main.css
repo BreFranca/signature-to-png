@@ -4,6 +4,11 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+body {
+	color: #005186;
+	font-size: 13px;
+}
+
 i {
 	width: 14px;
 	height: 14px;
@@ -31,9 +36,28 @@ i.icon-email {
     flex-wrap: wrap;
 }
 
+#tabs {
+	display: flex;
+	justify-content: space-around;
+}
+
+#tabs .tab {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 120px;
+	height: 35px;
+	background: orange;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
 h1 {
 	width: 100%;
 	text-align: center;
+	margin-bottom: 50px;
 }
 
 #form-data {
@@ -49,6 +73,14 @@ input {
 	display: block;
 	margin-bottom: 10px;
 	border: 1px solid #c1bfbf;
+	outline: none;
+}
+
+input.error {
+	border-color: red;
+}
+input.success {
+	border-color: green;
 }
 
 textarea {
@@ -61,37 +93,32 @@ textarea {
 	border: 1px solid #c1bfbf;
 }
 
-.container-signature {
+/*.container-signature {
 	display: none;
-}
+}*/
 
 #signature {
-	margin-top: 100px;
 	display: inline-block;
 	width: auto;
     display: -webkit-flex; /* Safari */
     display: flex;
-    align-items: center;
-    padding: 20px;
+    align-items: flex-start;
+    padding: 8px 10px;
     max-width: 670px;
 }
 
 .logo {
-	min-width: 220px;
-	height: 120px;
-	background: url('images/logo.png') center center no-repeat;
+	min-width: 206px;
+	height: 99px;
+	background: url('images/compre-bem/logo.jpg') center center no-repeat;
 }
 
-.line-vertical {
-	height: 130px;
-	min-width: 5px;
-	background: #505050;
-	margin: 0 15px;
-}
-
-.phones, .email {
+.contacts {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	border-left: 4px solid #005186;
+	margin-left: 15px;
+	padding-left: 15px;
 }
 
 #phone2-container {
@@ -99,23 +126,17 @@ textarea {
 }
 
 h2 {
-	font-size: 18px;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+#info-loja {
+	margin-bottom: 5px;
+}
+
+#cargo-area {
 	margin-bottom: 10px;
-	text-transform: uppercase;
-}
-
-.phones span, .email span {
-	font-size: 14px;
-	margin-left: 5px;
-}
-
-.email {
-	margin-top: 5px;
-	margin-bottom: 10px;
-}
-
-.address p {
-	font-size: 14px;
 }
 
 button {
@@ -149,4 +170,17 @@ button:hover {
 	margin-right: 0;
 	margin-left: auto;
 	margin-top: 10px;
+}
+
+#phones > span {
+	display: block;
+}
+
+.layout-loja #phones {
+	margin-bottom: 10px;
+}
+
+
+.layout-escritorio #email-area {
+	margin-bottom: 10px;
 }
